@@ -1,0 +1,70 @@
+<!-- Ini adalah deklarasi tipe dokumen untuk halaman web, yang menunjukkan bahwa halaman ini merupakan dokumen HTML -->
+<!DOCTYPE html>
+<!-- Tag pembuka untuk bagian HTML dokumen -->
+<html>
+<!-- Tag pembuka untuk bagian kepala dokumen yang berisi informasi tentang dokumen, seperti judul dan skrip JavaScript -->
+<head>
+	<!-- Menentukan judul dokumen di jendela browser atau tab -->
+	<title>Kalkulator Sederhana</title>
+	<!-- Ini adalah tag untuk menambahkan skrip JavaScript ke halaman HTML -->
+	<script type="text/javascript">
+		/* sebuah fungsi JavaScript yang akan dijalankan saat tombol "Hitung" pada halaman HTML ditekan. Fungsi ini mengambil nilai dari elemen input pada halaman HTML dan melakukan perhitungan berdasarkan operator yang dipilih. */
+		function hitung() {
+			/* sebuah variabel JavaScript yang menampung nilai bilangan pertama yang diinput oleh pengguna pada elemen input dengan id "bil1". Nilai input tersebut kemudian diubah menjadi tipe data angka (float) menggunakan fungsi parseFloat(). */
+			var bil1 = parseFloat(document.getElementById("bil1").value);
+			/* sebuah variabel JavaScript yang menampung nilai bilangan kedua yang diinput oleh pengguna pada elemen input dengan id "bil2". Nilai input tersebut kemudian diubah menjadi tipe data angka (float) menggunakan fungsi parseFloat(). */
+			var bil2 = parseFloat(document.getElementById("bil2").value);
+			/* sebuah variabel JavaScript yang menampung operator aritmatika yang dipilih oleh pengguna pada elemen select dengan id "operator". */
+			var op = document.getElementById("operator").value;
+			/* sebuah variabel JavaScript yang akan menampung hasil perhitungan aritmatika. */
+			var hasil;
+			/* sebuah kondisi if yang akan dievaluasi jika operator yang dipilih oleh pengguna adalah "+". Jika kondisi ini terpenuhi, maka bilangan pertama dan kedua akan dijumlahkan dan hasilnya disimpan pada variabel "hasil". */
+			if (op == "+") {
+				hasil = bil1 + bil2;
+			/* sebuah kondisi else-if yang akan dievaluasi jika operator yang dipilih oleh pengguna adalah "-". Jika kondisi ini terpenuhi, maka bilangan pertama akan dikurangi dengan bilangan kedua dan hasilnya disimpan pada variabel "hasil". */
+			} else if (op == "-") {
+				hasil = bil1 - bil2;
+			/* sebuah kondisi else-if yang akan dievaluasi jika operator yang dipilih oleh pengguna adalah "x". Jika kondisi ini terpenuhi, maka bilangan pertama akan dikalikan dengan bilangan kedua dan hasilnya disimpan pada variabel "hasil". */
+			} else if (op == "x") {
+				hasil = bil1 * bil2;
+			/* sebuah kondisi else-if yang akan dievaluasi jika operator yang dipilih oleh pengguna adalah "/". Jika kondisi ini terpenuhi, maka bilangan pertama akan dibagi dengan bilangan kedua dan hasilnya disimpan pada variabel "hasil". */
+			} else if (op == "/") {
+				hasil = bil1 / bil2;
+			}
+			/* sebuah variabel JavaScript yang menampung elemen input dengan id "hasil" dan mengubah nilai dari elemen input tersebut menjadi nilai dari variabel "hasil". */
+			document.getElementById("hasil").value = hasil;
+		}
+	</script>
+</head>
+<body>
+	<!-- Menampilkan sebuah judul "Kalkulator sederhana" dengan elemen <h1> -->
+	<h1>Kalkulator Sederhana</h1>
+	<!-- Menampilkan teks "Bilangan 1:" dengan elemen <p> -->
+	<p>Bilangan 1:</p>
+	<!-- Kode menampilkan sebuah kotak input teks dengan atribut id="bil1" yang dapat diisi dengan nilai angka yang akan dikonversi. -->
+	<input type="text" id="bil1">
+	<!-- Menampilkan teks "Bilangan 2:" dengan elemen <p> -->
+	<p>Bilangan 2:</p>
+	<!-- Kode menampilkan sebuah kotak input teks dengan atribut id="bil1" yang dapat diisi dengan nilai angka yang akan dikonversi. -->
+	<input type="text" id="bil2">
+	<!-- Menampilkan teks "Operator" dengan elemen <p> -->
+	<p>Operator:</p>
+	<!-- Kode menampilkan sebuah menu pilihan dengan atribut id="operator" dengan opsi yang tersedia -->
+	<select id="operator">
+		<!-- Kode menampilkan operator penjumlahan -->
+		<option value="+">+</option>
+		<!-- Kode menampilkan operator pengurangan -->
+		<option value="-">-</option>
+		<!-- Kode menampilkan operator perkalian -->
+		<option value="x">x</option>
+		<!-- Kode menampilkan operator pembagian -->
+		<option value="/">/</option>
+	</select>
+	<button onclick="hitung()">Hitung</button>
+	<!-- Menampilkan teks "Hasil" dengan elemen <p> -->
+	<p>Hasil:</p>
+	<!-- Kode menampilkan sebuah kotak input teks dengan atribut id="hasil" yang dapat diisi dengan nilai angka yang akan dikonversi. -->
+	<input type="text" id="hasil">
+</body>
+</html>
+
