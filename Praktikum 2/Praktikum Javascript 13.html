@@ -1,0 +1,59 @@
+<!-- Ini adalah deklarasi tipe dokumen untuk halaman web, yang menunjukkan bahwa halaman ini merupakan dokumen HTML -->
+<!DOCTYPE html>
+<!-- Tag pembuka untuk bagian HTML dokumen -->
+<html>
+<!-- Tag pembuka untuk bagian kepala dokumen yang berisi informasi tentang dokumen, seperti judul dan skrip JavaScript -->
+<head>
+	<!-- Menentukan judul dokumen di jendela browser atau tab -->
+	<title>Konversi Nilai Angka ke Nilai Huruf</title>
+	<!-- Ini adalah tag untuk menambahkan skrip JavaScript ke halaman HTML -->
+	<script type="text/javascript">
+		/* Ini adalah deklarasi fungsi JavaScript dengan nama "konversi" */
+		function konversi() {
+			/* Mendapatkan nilai numerik dari input dengan id "nilai", mengkonversinya menjadi bilangan pecahan (float), dan menyimpannya ke variabel "nilai" */
+			var nilai = parseFloat(document.getElementById("nilai").value);
+			/* Mendeklarasikan variabel "huruf" yang akan digunakan untuk menyimpan nilai huruf yang dihasilkan */
+			var huruf;
+			/* Ini adalah kondisi pertama yang menentukan jika nilai numerik berada pada rentang antara 0 dan 40, maka variabel "huruf" akan diisi dengan "E" */
+			if (nilai >= 0 && nilai <= 40) {
+				huruf = "E";
+			/* Ini adalah kondisi kedua yang menentukan jika nilai numerik berada pada rentang antara 41 dan 55, maka variabel "huruf" akan diisi dengan "D" */
+			} else if (nilai >= 41 && nilai <= 55) {
+				huruf = "D";
+			/* Ini adalah kondisi ketiga yang menentukan jika nilai numerik berada pada rentang antara 56 dan 60, maka variabel "huruf" akan diisi dengan "C" */
+			} else if (nilai >= 56 && nilai <= 60) {
+				huruf = "C";
+			/* Ini adalah kondisi keempat yang menentukan jika nilai numerik berada pada rentang antara 61 dan 65, maka variabel "huruf" akan diisi dengan "BC" */
+			} else if (nilai >= 61 && nilai <= 65) {
+				huruf = "BC";
+			/* Ini adalah kondisi kelima yang menentukan jika nilai numerik berada pada rentang antara 66 dan 70, maka variabel "huruf" akan diisi dengan "B" */
+			} else if (nilai >= 66 && nilai <= 70) {
+				huruf = "B";
+			/* Ini adalah kondisi keenam yang menentukan jika nilai numerik berada pada rentang antara 71 dan 80, maka variabel "huruf" akan diisi dengan "AB" */
+			} else if (nilai >= 71 && nilai <= 80) {
+				huruf = "AB";
+			/* Ini adalah kondisi ketujuh yang menentukan jika nilai numerik berada pada rentang antara 81 dan 100, maka variabel "huruf" akan diisi dengan "A" */
+			} else if (nilai >= 81 && nilai <= 100) {
+				huruf = "A";
+			/* Ini adalah kondisi terakhir yang menentukan jika nilai numerik tidak berada pada rentang yang valid, maka variabel "huruf" akan diisi dengan "Nilai tidak valid" */
+			} else {
+				huruf = "Nilai tidak valid";
+			}
+			
+			document.getElementById("hasil").innerHTML = "Nilai huruf: " + huruf;
+		}
+	</script>
+</head>
+<body>
+	<!-- Menampilkan sebuah judul "Konversi Nilai Angka ke Nilai Huruf" dengan elemen <h1> -->
+	<h1>Konversi Nilai Angka ke Nilai Huruf</h1>
+	<!-- Menampilkan teks "Masukkan nilai angka:" dengan elemen <p> -->
+	<p>Masukkan nilai angka:</p>
+	<!-- Kode menampilkan sebuah kotak input teks dengan atribut id="nilai" yang dapat diisi dengan nilai angka yang akan dikonversi. -->
+	<input type="text" id="nilai">
+	<!-- kode menampilkan sebuah tombol dengan teks "Konversi" yang dapat diklik untuk memulai proses konversi nilai angka menjadi nilai huruf. Ketika tombol ini diklik, fungsi konversi() yang telah didefinisikan di dalam elemen <script> akan dipanggil -->
+	<button onclick="konversi()">Konversi</button>
+	<!-- kode menampilkan hasil konversi dengan sebuah elemen <p> yang memiliki atribut id="hasil". Hasil konversi akan ditampilkan di dalam elemen ini menggunakan metode innerHTML yang diakses melalui objek document.getElementById("hasil") -->
+	<p id="hasil"></p>
+</body>
+</html>
