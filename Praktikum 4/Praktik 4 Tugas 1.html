@@ -1,0 +1,39 @@
+<!-- Deklarasi tipe dokumen HTML yang digunakan, dalam hal ini HTML versi terbaru -->
+<!DOCTYPE html>
+<!-- Tag pembuka untuk dokumen HTML-->
+<html>
+<!-- Bagian kepala dokumen HTML yang berisi informasi meta-data dan referensi ke file eksternal seperti CSS dan JavaScript -->
+<head>
+    <!-- Mengimport file JavaScript jQuery dari lokasi yang ditentukan dalam atribut src -->
+    <script src="jquery-3.6.3.min.js"></script>
+    <!-- Tag pembuka untuk blok script JavaScript -->
+    <script type="text/javascript">
+        // Menjalankan script jQuery setelah dokumen HTML selesai dimuat. Blok script JavaScript di dalamnya berisi aksi-aksi yang dijalankan ketika dokumen sudah selesai dimuat.
+        $(document).ready(function(){
+            // Menambahkan event listener pada button dengan class sembunyi1 yang akan menyembunyikan elemen dengan id foto1 ketika button tersebut diklik
+            $(".sembunyi1").click(function() {$("#foto1").hide("slow") });
+            // Menambahkan event listener pada button dengan class tampil1 yang akan menampilkan elemen dengan id foto1 ketika button tersebut diklik
+            $(".tampil1").click(function() {$("#foto1").show("slow") });
+            // Menambahkan event listener pada button dengan class sembunyi2 yang akan menyembunyikan elemen dengan id foto2 ketika button tersebut diklik
+            $(".sembunyi2").click(function() {$("#foto2").hide("slow") });
+            // Menambahkan event listener pada button dengan class tampil2 yang akan menampilkan elemen dengan id foto2 ketika button tersebut diklik
+            $(".tampil2").click(function() {$("#foto2").show("slow") });
+        });
+    </script>
+</head>
+<!-- Bagian tubuh dokumen HTML yang berisi konten yang akan ditampilkan di browser -->
+<body>
+    <!-- Button untuk sembunyikan foto1 -->
+    <button class="sembunyi1">sembunyikan</button> 
+    <!-- Button untuk tampilkan foto1 -->
+    <button class="tampil1">tampilkan</button>
+    <!-- Foto 1 -->
+    <p><img id="foto1" src="164_present.jpg"></p>
+    <!-- Button untuk sembunyikan foto2 -->
+    <button class="sembunyi2" style="margin-top: 10px;">sembunyikan</button> 
+    <!-- Button untuk tampilkan foto2 -->
+    <button class="tampil2" style="margin-top: 10px;">tampilkan</button>
+    <!-- Foto 2 -->
+    <p><img id="foto2" src="air_mancur.jpg"></p>
+</body>
+</html>

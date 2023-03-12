@@ -1,0 +1,55 @@
+<!-- Deklarasi tipe dokumen HTML yang digunakan, dalam hal ini HTML versi terbaru -->
+<!DOCTYPE html>
+<!-- Tag pembuka untuk dokumen HTML-->
+<html>
+<!-- Bagian kepala dokumen HTML yang berisi informasi meta-data dan referensi ke file eksternal seperti CSS dan JavaScript -->
+<head>
+    <!-- Menetapkan judul dokumen yang akan ditampilkan di tab peramban web -->
+	<title>Perubahan Kotak Berwarna</title>
+    <!-- Menentukan gaya CSS yang akan digunakan dalam dokumen -->
+	<style>
+        /* Menentukan elemen HTML yang akan diubah gaya CSS-nya */
+		.kotak {
+            /* Menentukan lebar kotak */
+			width: 50px;
+            /* Menentukan tinggi kotak */
+			height: 50px;
+            /* Menentukan warna latar belakang kotak */
+			background-color: yellow;
+            /* Menentukan margin kotak */
+			display: inline-block;
+            /* Menentukan margin kotak */
+			margin-right: 10px;
+		}
+        /* Menentukan elemen HTML yang akan diubah gaya CSS-nya ketika kotak tersebut diklik */
+		.merah {
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+    <!-- Menunjukkan petunjuk penggunaan pada dokumen -->
+    <p>klik 2x pada setiap kotak untuk mengubah warnanya</p>
+    <!-- Membuat sebuah elemen kotak pada dokumen -->
+	<div class="kotak"></div>
+    <!-- Membuat sebuah elemen kotak pada dokumen -->
+	<div class="kotak"></div>
+    <!-- Membuat sebuah elemen kotak pada dokumen -->
+	<div class="kotak"></div>
+    <!-- Membuat sebuah elemen kotak pada dokumen -->
+	<div class="kotak"></div>
+    <!-- Tag pembuka untuk blok script JavaScript -->
+	<script>
+        /* Mengambil semua elemen dengan kelas kotak dan menetapkan mereka pada variabel kotak */
+		var kotak = document.querySelectorAll(".kotak");
+        /* Melakukan perulangan untuk menambahkan event listener pada setiap elemen kotak */
+		for (var i = 0; i < kotak.length; i++) {
+            /* Menambahkan event listener pada setiap elemen kotak */
+			kotak[i].addEventListener("dblclick", function() {
+                /* Menambahkan kelas merah pada elemen kotak yang diklik */
+				this.classList.toggle("merah");
+			});
+		}
+	</script>
+</body>
+</html>

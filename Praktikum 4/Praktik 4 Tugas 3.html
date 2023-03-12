@@ -1,0 +1,64 @@
+<!-- Mendefinisikan jenis dokumen HTML yang digunakan oleh browser -->
+<!DOCTYPE html>
+<!-- Menandakan awal dan akhir dari sebuah dokumen HTML -->
+<html>
+<!-- Menyediakan informasi meta-data tentang dokumen HTML seperti judul halaman, link ke file CSS, dan skrip JavaScript -->
+<head>
+    <!-- Mendefinisikan judul dokumen HTML yang akan ditampilkan di tab browser -->
+	<title>Efek Fade</title>
+    <!-- Mendefinisikan skrip JavaScript yang akan digunakan dalam dokumen HTML -->
+	<style>
+        /* Selector CSS yang memilih elemen HTML dengan ID "kotak" */
+		#kotak {
+            /* Property CSS yang menentukan jarak antara elemen HTML dengan elemen HTML lain di sekitarnya */
+            margin-bottom: 20px;
+            /* Property CSS yang menentukan lebar elemen HTML */
+			width: 200px;
+            /* Property CSS yang menentukan tinggi elemen HTML */
+			height: 200px;
+            /* Property CSS yang menentukan warna latar belakang elemen HTML */
+			background-color: blue;
+            /* Property CSS yang menentukan opasitas elemen HTML */
+			opacity: 1;
+            /* Property CSS yang menentukan animasi perubahan nilai pada elemen HTML, pada kasus ini transisi perubahan opasitas berlangsung selama 1 detik dengan efek ease-in-out */
+			transition: opacity 1s ease-in-out;
+		}
+        /* Selector CSS yang memilih elemen HTML dengan tag "button" */
+        button{
+            /* Menentukan margin button */
+            margin-bottom: 20px;
+        }
+	</style>
+</head>
+<!-- Menandakan awal dan akhir dari isi dokumen HTML -->
+<body>
+    <!-- Elemen HTML yang berupa kotak yang akan diubah opasitasnya -->
+	<div id="kotak"></div>
+    <!-- Attribute HTML yang menentukan bahwa fungsi fadeIn() akan dijalankan ketika tombol tersebut diklik -->
+	<button onclick="fadeIn()">Fade In</button>
+    <!-- Attribute HTML yang menentukan bahwa fungsi fadeOut() akan dijalankan ketika tombol tersebut diklik -->
+	<button onclick="fadeOut()">Fade Out</button>
+    <!-- Attribute HTML yang menentukan bahwa fungsi fadeTo() akan dijalankan ketika tombol tersebut diklik -->
+	<button onclick="fadeTo()">Fade To 0.3</button>
+    <!-- Mendefinisikan skrip JavaScript yang akan digunakan dalam dokumen HTML -->
+	<script>
+        /* Fungsi JavaScript yang akan mengubah opasitas elemen HTML menjadi 1 */
+		function fadeIn() {
+            /* Mengubah nilai properti CSS opacity dari elemen dengan ID 'kotak' menjadi 1 atau sepenuhnya terlihat */
+			document.getElementById('kotak').style.opacity = '1';
+		}
+        /* Fungsi JavaScript yang akan mengubah opasitas elemen HTML menjadi 0 */
+		function fadeOut() {
+            /* Mengubah nilai properti CSS opacity dari elemen dengan ID 'kotak' menjadi 0 atau tidak terlihat */
+			document.getElementById('kotak').style.opacity = '0';
+		}
+        /* Fungsi JavaScript yang akan mengubah opasitas elemen HTML menjadi 0.3 */
+		function fadeTo() {
+            /* Menyimpan referensi atau objek elemen HTML dengan ID 'kotak' ke dalam variabel kotak */
+			var kotak = document.getElementById('kotak');
+            /* Mengubah nilai properti CSS opacity dari variabel kotak menjadi 0.3 atau terlihat dengan opasitas 30% */
+			kotak.style.opacity = '0.3';
+		}
+	</script>
+</body>
+</html>
