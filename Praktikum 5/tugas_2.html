@@ -1,0 +1,100 @@
+<!-- Deklarasi tipe dokumen yang akan digunakan pada halaman web, yaitu tipe dokumen HTML -->
+<!DOCTYPE html>
+<!-- Membuka tag <html> yang menandakan awal dokumen HTML -->
+<html>
+    <!-- Membuka tag <head> yang berisi informasi tentang dokumen HTML, seperti judul halaman, meta-data, dan link atau script yang dibutuhkan oleh halaman web -->
+<head>
+    <!-- Tag untuk memberikan judul halaman web yang akan muncul pada tab browser -->
+	<title>Video Player</title>
+    <!-- Tag untuk menentukan encoding karakter yang digunakan pada halaman web -->
+	<meta charset="utf-8">
+    <!-- Tag untuk memberikan informasi tentang ukuran layar dan tampilan halaman web, sehingga dapat menyesuaikan ukuran layar perangkat yang digunakan oleh pengguna -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Tag untuk menyisipkan link ke file CSS dari CDN Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Tag untuk menyisipkan link ke file CSS dari CDN Google Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <!-- Menambahkan CSS khusus yang akan digunakan dalam halaman ini -->
+	<style>
+        /*  Berisi konten tampilan halaman HTML dengan variabel body */
+		body {
+            /*  Mengatur font dan jenis font yang digunakan halaman HTML */
+			font-family: 'Roboto', sans-serif;
+		}
+        /*  Berisi konten tampilan halaman HTML dengan variabel h1 */
+		h1 {
+            /*  Mengatur ukuran font yang digunakan halaman HTML */
+			font-size: 28px;
+            /*  Mengatur tebal font yang digunakan halaman HTML */
+			font-weight: bold;
+            /*  Mengatur posisi teks yang digunakan halaman HTML */
+			text-align: center;
+		}
+        /*  Berisi konten tampilan halaman HTML dengan variabel table */
+		table {
+            /*  Mengatur posisi margin yang digunakan halaman HTML */
+			margin-top: 30px;
+		}
+        /*  Berisi konten tampilan halaman HTML dengan variabel table td */
+		table td:first-child {
+            /*  Mengatur tebal font yang digunakan halaman HTML */
+			font-weight: bold;
+            /*  Mengatur lebar kolom yang digunakan halaman HTML */
+			width: 120px;
+		}
+	</style>
+</head>
+<!-- Membuka tag <body> yang berisi konten yang akan ditampilkan pada halaman web -->
+<body>
+    <!-- Membuat kotak div dengan kelas "container" dan margin atas sebesar 5 (mt-5) -->
+	<div class="container mt-5">
+        <!-- Membuat kotak div dengan kelas "container" dan margin atas sebesar 5 (mt-5) -->
+		<div class="embed-responsive embed-responsive-16by9">
+            <!-- Menambahkan video player dengan sumber dari Youtube -->
+			<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Fh7acREmkGs"></iframe>
+		</div>
+        <!-- Menambahkan judul video -->
+		<h1>How It's Made: Chocolate Chip Cookies</h1>
+        <!-- Membuat tabel dengan kelas "table-bordered" dari Bootstrap -->
+		<table class="table table-bordered">
+            <!-- Menunjukkan isi dari tabel yang akan ditampilkan -->
+			<tbody>
+                <!-- Menambahkan baris tabel -->
+				<tr>
+                    <!-- Menambahkan sel pada tabel -->
+					<td>Uploader</td>
+                    Menambahkan sel pada tabel
+					<td>Science Channel</td>
+				</tr>
+                <!-- Menambahkan baris tabel -->
+				<tr>
+                    <!-- Menambahkan sel pada tabel -->
+					<td>Views</td>
+                    <!-- Menambahkan sel pada tabel -->
+					<td>2.200,000</td>
+				</tr>
+                <!-- Menambahkan baris tabel -->
+				<tr>
+                    <!-- Menambahkan sel pada tabel -->
+					<td>Likes</td>
+                    <!-- Menambahkan sel pada tabel -->
+					<td>22,000</td>
+				</tr>
+                <!-- Menambahkan baris tabel -->
+				<tr>
+                    <!-- Menambahkan sel pada tabel -->
+					<td>Dislikes</td>
+                    <!-- Menambahkan sel pada tabel -->
+					<td>573</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+    <!-- Tag untuk menyisipkan script JavaScript dari CDN jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Tag untuk menyisipkan script JavaScript dari CDN Popper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Tag untuk menyisipkan script JavaScript dari CDN Bootstrap -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!-- Deklarasi tipe dokumen yang akan digunakan pada halaman web, yaitu tipe dokumen HTML -->
+<!DOCTYPE html>
+<!-- Membuka tag <html> yang menandakan awal dokumen HTML -->
+<html>
+<!-- Membuka tag <head> yang berisi informasi tentang dokumen HTML, seperti judul halaman, meta-data, dan link atau script yang dibutuhkan oleh halaman web -->
+<head>
+    <!-- Tag untuk memberikan judul halaman web yang akan muncul pada tab browser -->
+	<title>Form Registrasi</title>
+    <!-- Tag untuk menentukan encoding karakter yang digunakan pada halaman web -->
+	<meta charset="utf-8">
+    <!-- Tag untuk memberikan informasi tentang ukuran layar dan tampilan halaman web, sehingga dapat menyesuaikan ukuran layar perangkat yang digunakan oleh pengguna -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Tag untuk menyisipkan stylesheet CSS Bootstrap yang digunakan untuk merancang tampilan web dengan Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<!-- Membuka tag <body> yang menandakan awal isi halaman web -->
+<body>
+    <!-- Membuka tag <div> yang berfungsi untuk mengelompokkan elemen HTML -->
+	<div class="container">
+        <!-- Membuka tag <h2> yang berfungsi untuk menampilkan judul -->
+		<h2>Form Registrasi Akun</h2>
+        <!-- Membuka tag <form> yang berfungsi untuk membuat form -->
+		<form>
+            <!-- Tag untuk membungkus input field pada form, sehingga memudahkan pengaturan tampilan -->
+			<div class="form-group">
+                <!-- Tag untuk memberikan label atau teks pada input field pada form -->
+				<label for="nama">Nama Lengkap:</label>
+                <!-- Tag untuk membuat input field pada form -->
+				<input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Lengkap Anda">
+			</div>
+            <!-- Tag untuk membungkus input field pada form, sehingga memudahkan pengaturan tampilan -->
+			<div class="form-group">
+                <!-- Tag untuk memberikan label atau teks pada input field pada form -->
+				<label for="email">Alamat Email:</label>
+                <!-- Tag untuk membuat input field pada form -->
+				<input type="email" class="form-control" id="email" placeholder="Masukkan Alamat Email Anda">
+			</div>
+            <!-- Tag untuk membungkus input field pada form, sehingga memudahkan pengaturan tampilan -->
+			<div class="form-group">
+                <!-- Tag untuk memberikan label atau teks pada input field pada form -->
+				<label for="password">Kata Sandi:</label>
+                <!-- Tag untuk membuat input field pada form -->
+				<input type="password" class="form-control" id="password" placeholder="Masukkan Kata Sandi Anda">
+			</div>
+            <!-- Tag untuk membuat tombol pada form yang dapat digunakan untuk mengirim data form atau melakukan tindakan lainnya -->
+			<button type="submit" class="btn btn-primary">Daftar</button>
+		</form>
+	</div>
+    <!-- Tag untuk menambahkan script JavaScript pada halaman web -->
+	<script>
+        // Script untuk menjalankan fungsi saat dokumen HTML telah selesai dimuat
+		$(document).ready(function(){
+            // Script untuk menjalankan fungsi saat tombol submit pada form diklik
+			$("form").submit(function(){
+                // Script untuk menampilkan pesan alert
+				alert("Terima kasih sudah mendaftar!");
+			});
+		});
+	</script>
+    <!-- Tag untuk menyisipkan script JavaScript dari CDN jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Tag untuk menyisipkan script JavaScript dari CDN Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Tag untuk menyisipkan script JavaScript dari CDN Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
